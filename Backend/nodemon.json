@@ -1,0 +1,17 @@
+{
+    "watch": [
+        "."
+    ],
+    "ext": "ts,json",
+    "ignore": [
+        "**/logs/**",
+        "**/public/**",
+        "**/node_modules/**",
+        "**/*.test.ts",
+        "flutter_integration.md",
+        "API_GUIDE.md",
+        "package-lock.json",
+        "test-swagger.ts"
+    ],
+    "exec": "tsx server.ts"
+}

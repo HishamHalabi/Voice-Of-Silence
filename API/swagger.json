@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Voice to Silence API",
+    "version": "1.0.0",
+    "description": "Professional API for real-time sign language recognition, speech synthesis, and secure messaging.",
+    "contact": {
+      "name": "Development Team"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local Development Server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "summary": "Register a new user",
+        "tags": ["Authentication"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "201": { "description": "User created" } }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "summary": "Login user",
+        "tags": ["Authentication"],
+        "responses": { "200": { "description": "Login successful" } }
+      }
+    },
+    "/api/glove/predict": {
+      "post": {
+        "summary": "Predict sign from glove data",
+        "tags": ["Glove"],
+        "responses": { "200": { "description": "Prediction result" } }
+      }
+    },
+    "/api/chat/messages": {
+      "get": {
+        "summary": "Get message history",
+        "tags": ["Messaging"],
+        "responses": { "200": { "description": "List of messages" } }
+      }
+    }
+  }
+}

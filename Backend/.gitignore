@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Uploaded files
+public/audio/chat/*
+!public/audio/chat/.gitkeep
+public/audio/tts/*
+!public/audio/tts/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# AI Models (if large)
+ai/models/*.bin
+ai/models/*.onnx
+ai/datasets/*
+!ai/datasets/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Credentials
+google-credentials.json
+*.pem
+*.key

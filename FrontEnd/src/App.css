@@ -1,0 +1,38 @@
+/* Global app styles - mostly handled by Tailwind now */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: hsl(185, 100%, 50%);
+  color: hsl(220, 20%, 4%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220, 20%, 4%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(185, 100%, 50% / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(185, 100%, 50% / 0.5);
+}
