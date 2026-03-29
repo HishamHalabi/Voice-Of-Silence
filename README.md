@@ -1,5 +1,8 @@
 # Voice to Silence (Smart Glove)
 
+
+Have alook  : https://youtu.be/znJhI4twETY
+
 A comprehensive system designed to bridge the communication gap between the deaf/hard-of-hearing and the hearing world. This project translates Arabic sign language gestures into spoken words and text in real-time.
 
 ## Project Overview
